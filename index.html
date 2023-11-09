@@ -1,0 +1,35 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Narrative Story</title>
+<style>
+  #story-container {
+    text-align: center;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+</head>
+<body>
+
+<div id="story-container">
+  <img id="story-image" src="images/front.jpg" alt="Scene 1">
+  <audio id="story-audio" controls style="display:none">
+    <source id="audio-source" src="audio/audio1.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <br>
+
+  <button  onclick="style.display = 'none'" id="start-button">Start</button>
+  <button id="next-button">Next</button>
+</div>
+ <script src="script.js"></script>
+
+</body>
+</html>
