@@ -2,7 +2,9 @@
 09.11.2023
 
 Team members: Maisha, Diana, Darko, Youssef
+
 Project Name: Haunted House: Try to Escape
+
 Project Description: 
 The project is an audiobook about the scary story of the main protagonist, who is stuck at the Haunted House with the Witch. Despite his attempts to escape the house, the house becomes one huge end point for him. 
 The theme of the project is centered around horror and suspense with a bit of a comical effect. It includes the classic elements of haunted house stories, creating an atmosphere of fear, mystery, and fantasy. 
