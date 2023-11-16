@@ -10,9 +10,12 @@
 //   }, 8000); // 8 seconds
 // }
 
+// // Import the page-flip library
+// import PageFlip from "page-flip";
+
 //we start with the page1.html file from here
 const scenes = [
-  { img: "images/page1.gif", audio: "audio/audio1.mp3" },
+  { img: "images/page1New.gif", audio: "audio/audio1.mp3" },
   { img: "images/page2.gif", audio: "audio/audio2.mp3" },
   { img: "images/page3.gif", audio: "audio/audio3.mp3" },
   { img: "images/page4.gif", audio: "audio/audio4.mp3" },
@@ -28,8 +31,10 @@ const scenes = [
 ];
 
 let currentScene = -1; // Start before the first scene, which is the video scene
+//let flipbook;
 
 // Get the elements
+const storyContainer = document.getElementById("story-container");
 const imageElement = document.getElementById("story-image");
 const audioElement = document.getElementById("story-audio");
 const audioSourceElement = document.getElementById("audio-source");
@@ -66,3 +71,52 @@ function changeScene() {
 // Event listeners for the buttons
 startButton.addEventListener("click", startStory);
 nextButton.addEventListener("click", changeScene);
+
+// // Function to start the story
+// function startStory() {
+//   startButton.style.display = "none"; // Hide the start button
+//   nextButton.style.display = "none"; // Hide the next button initially
+//   initTurn(); // Initialize the Turn.js flipbook
+//   changeScene(); // Change to the first scene
+// }
+
+// // Function to initialize the Turn.js flipbook
+// function initTurn() {
+//   flipbook = $(storyContainer).turn({
+//     width: "100%",
+//     height: "100%",
+//     autoCenter: true,
+//     display: "single", // Display as single pages
+//   });
+
+//   // Hide the Turn.js corner (optional)
+//   $(storyContainer).bind("start", function (event, pageObject, corner) {
+//     if (corner === "tl" || corner === "tr") {
+//       event.preventDefault();
+//     }
+//   });
+// }
+
+// // Function to change the scene
+// function changeScene() {
+//   currentScene++;
+//   if (currentScene >= scenes.length) {
+//     // Reached the end, hide the next button and exit the function
+//     nextButton.style.display = "none";
+//     startButton.style.display = "none";
+//     return;
+//   }
+//   if (scenes[currentScene].img) {
+//     imageElement.src = scenes[currentScene].img;
+//     flipbook.turn("next"); // Turn to the next page
+//   }
+//   if (scenes[currentScene].audio) {
+//     audioSourceElement.src = scenes[currentScene].audio;
+//     audioElement.load(); // Load the new audio source
+//     audioElement.play(); // Play the audio
+//   }
+// }
+
+// // Event listeners for the buttons
+// startButton.addEventListener("click", startStory);
+// nextButton.addEventListener("click", changeScene);
